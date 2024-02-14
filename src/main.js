@@ -1,6 +1,12 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 
+
+//Oh Vue Icons
+import {OhVueIcon, addIcons} from "oh-vue-icons";
+import {FaAlignJustify} from "oh-vue-icons/icons";
+addIcons(FaAlignJustify);
+
 // Vuetify
 import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
@@ -12,4 +18,7 @@ const vuetify = createVuetify({
   directives,
 })
 
-createApp(App).use(vuetify).mount('#app')
+createApp(App)
+  .use(vuetify)
+  .component("v-icon", OhVueIcon)
+  .mount('#app')
